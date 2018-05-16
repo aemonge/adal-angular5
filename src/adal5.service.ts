@@ -1,8 +1,7 @@
+import { Observable, bindCallback } from 'rxjs';
 import * as adalLib from 'adal-angular';
-import { adal } from 'adal-angular';
 import { Adal5User } from './adal5-user';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
 
 import User = adal.User;
 
@@ -195,7 +194,7 @@ export class Adal5Service {
     const _this = this;   // save outer this for inner function
 
     let errorMessage: string;
-    return Observable.bindCallback(acquireTokenInternal, function (token: string) {
+    return bindCallback(acquireTokenInternal, function (token: string) {
       if (!token && errorMessage) {
         throw (errorMessage);
       }
@@ -227,7 +226,7 @@ export class Adal5Service {
    * @memberOf Adal5Service
    */
   public getUser(): Observable<any> {
-    return Observable.bindCallback((cb: (u: adal.User) => User) => {
+    return bindCallback((cb: (u: adal.User) => User) => {
       this.adalContext.getUser(function (error: string, user: adal.User) {
         if (error) {
           this.adalContext.error('Error when getting user', error);

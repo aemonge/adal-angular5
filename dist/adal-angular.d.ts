@@ -8,14 +8,16 @@ declare var AuthenticationContext: adal.AuthenticationContextStatic;
 declare var Logging: adal.Logging;
 
 declare module 'adal' {
-    export = { AuthenticationContext, Logging };
+  var AuthenticationContext: adal.AuthenticationContextStatic;
+  var Logging: adal.Logging;
+  export { AuthenticationContext, Logging };
 }
 
 declare namespace adal {
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface Config
      */
     interface Config {
@@ -39,8 +41,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface User
      */
     interface User {
@@ -49,8 +51,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface RequestInfo
      */
     interface RequestInfo {
@@ -62,8 +64,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface Logging
      */
     interface Logging {
@@ -72,8 +74,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @enum {number}
      */
     enum LoggingLevel {
@@ -84,8 +86,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface AuthenticationContextStatic
      */
     interface AuthenticationContextStatic {
@@ -93,8 +95,8 @@ declare namespace adal {
     }
 
     /**
-     * 
-     * 
+     *
+     *
      * @interface AuthenticationContext
      */
     interface AuthenticationContext {
@@ -212,7 +214,7 @@ declare namespace adal {
         getResourceForEndpoint(endpoint: string): string;
 
         /**
-         * Handles redirection after login operation. 
+         * Handles redirection after login operation.
          * Gets access token from url and saves token to the (local/session) storage
          * or saves error in case unsuccessful login.
          */
@@ -228,8 +230,8 @@ declare namespace adal {
 }
 
 /**
- * 
- * 
+ *
+ *
  * @interface Window
  */
 interface Window {

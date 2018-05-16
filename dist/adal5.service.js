@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var rxjs_1 = require("rxjs");
 var adalLib = require("adal-angular");
 var core_1 = require("@angular/core");
-var Rx_1 = require("rxjs/Rx");
 /**
  *
  *
  * @export
  * @class Adal5Service
  */
-var Adal5Service = (function () {
+var Adal5Service = /** @class */ (function () {
     /**
      * Creates an instance of Adal5Service.
      *
@@ -177,7 +177,7 @@ var Adal5Service = (function () {
     Adal5Service.prototype.acquireToken = function (resource) {
         var _this = this; // save outer this for inner function
         var errorMessage;
-        return Rx_1.Observable.bindCallback(acquireTokenInternal, function (token) {
+        return rxjs_1.bindCallback(acquireTokenInternal, function (token) {
             if (!token && errorMessage) {
                 throw (errorMessage);
             }
@@ -208,7 +208,7 @@ var Adal5Service = (function () {
      */
     Adal5Service.prototype.getUser = function () {
         var _this = this;
-        return Rx_1.Observable.bindCallback(function (cb) {
+        return rxjs_1.bindCallback(function (cb) {
             _this.adalContext.getUser(function (error, user) {
                 if (error) {
                     this.adalContext.error('Error when getting user', error);

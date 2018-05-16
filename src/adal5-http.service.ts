@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/catch';
 import { Adal5Service } from './adal5.service';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
@@ -188,14 +190,14 @@ export class Adal5HTTPService {
     params?: HttpParams | { [param: string]: string | string[]; };
     responseType?: 'json';
     withCredentials?: boolean;
-  }): Observable<string> {
+  }): Observable<Object> {
 
     const resource = this.service.GetResourceForEndpoint(url);
-    let authenticatedCall: Observable<string>;
+    let authenticatedCall: Observable<Object>;
     if (resource) {
       if (this.service.userInfo.authenticated) {
         authenticatedCall = this.service.acquireToken(resource)
-          .flatMap((token: string) => {
+          .mergeMap((token: string) => {
             if (options.headers == null) {
               options.headers = new HttpHeaders();
             }

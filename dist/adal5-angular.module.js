@@ -12,7 +12,7 @@ var adal5_service_1 = require("./adal5.service");
 var adal5_http_service_1 = require("./adal5-http.service");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
-var Adal5AgnularModule = (function () {
+var Adal5AgnularModule = /** @class */ (function () {
     function Adal5AgnularModule() {
     }
     Adal5AgnularModule = __decorate([

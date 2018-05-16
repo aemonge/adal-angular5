@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var Adal5Interceptor = (function () {
+var Adal5Interceptor = /** @class */ (function () {
     function Adal5Interceptor(adal5Service) {
         this.adal5Service = adal5Service;
     }

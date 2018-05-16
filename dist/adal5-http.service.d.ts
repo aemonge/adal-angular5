@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/catch';
 import { Adal5Service } from './adal5.service';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 /**

@@ -6,7 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Rx_1 = require("rxjs/Rx");
+var rxjs_1 = require("rxjs");
+require("rxjs/add/operator/mergeMap");
+require("rxjs/add/operator/catch");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 /**
@@ -15,7 +17,7 @@ var http_1 = require("@angular/common/http");
  * @export
  * @class Adal5HTTPService
  */
-var Adal5HTTPService = (function () {
+var Adal5HTTPService = /** @class */ (function () {
     /**
      * Creates an instance of Adal5HTTPService.
      * @param {HttpClient} http
@@ -136,7 +138,7 @@ var Adal5HTTPService = (function () {
         if (resource) {
             if (this.service.userInfo.authenticated) {
                 authenticatedCall = this.service.acquireToken(resource)
-                    .flatMap(function (token) {
+                    .mergeMap(function (token) {
                     if (options.headers == null) {
                         options.headers = new http_1.HttpHeaders();
                     }
@@ -146,7 +148,7 @@ var Adal5HTTPService = (function () {
                 });
             }
             else {
-                authenticatedCall = Rx_1.Observable.throw(new Error('User Not Authenticated.'));
+                authenticatedCall = rxjs_1.Observable.throw(new Error('User Not Authenticated.'));
             }
         }
         else {
@@ -167,7 +169,7 @@ var Adal5HTTPService = (function () {
         // In a real world app, we might send the error to remote logging infrastructure
         var errMsg = error.message || 'Server error';
         console.error(JSON.stringify(error)); // log to console instead
-        return Rx_1.Observable.throw(error);
+        return rxjs_1.Observable.throw(error);
     };
     Adal5HTTPService = Adal5HTTPService_1 = __decorate([
         core_1.Injectable()
