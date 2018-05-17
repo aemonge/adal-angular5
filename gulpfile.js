@@ -44,25 +44,25 @@ gulp.task('bundle', ['bump'], function () {
     ]);
 });
 
-gulp.task('copy', ['bundle'], () => {
+gulp.task('copy', ['bundle'], function() {
 
     gulp.src(['src/adal-angular.d.ts', 'README.md', 'LICENSE'])
         .pipe(gulp.dest('dist/'));
-});
+}.bind(this));
 
-gulp.task('package', ['copy'], () => {
+gulp.task('package', ['copy'], function() {
 
-    const pkgjson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+    var pkgjson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
     delete pkgjson.scripts;
 
     delete pkgjson.devDependencies;
 
-    const filepath = './dist/package.json';
+    var filepath = './dist/package.json';
 
     fs.writeFileSync(filepath, JSON.stringify(pkgjson, null, 2), 'utf-8');
 
-});
+}.bind(this));
 
 gulp.task('git-add', ['package'], function (cb) {
     exec('git add -A', function (err, stdout, stderr) {
