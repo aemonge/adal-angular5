@@ -43,7 +43,7 @@ var Adal6Service = /** @class */ (function () {
     /**
      *
      *
-     * @param {adal.Config} configOptions
+     * @param {any} configOptions
      *
      * @memberOf Adal6Service
      */
@@ -70,7 +70,7 @@ var Adal6Service = /** @class */ (function () {
          *
          *
          * @readonly
-         * @type {adal.Config}
+         * @type {any}
          * @memberOf Adal6Service
          */
         get: function () {

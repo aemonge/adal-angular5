@@ -51,11 +51,11 @@ export class Adal6Service {
   /**
    *
    *
-   * @param {adal.Config} configOptions
+   * @param {any} configOptions
    *
    * @memberOf Adal6Service
    */
-  public init(configOptions: adal.Config) {
+  public init(configOptions: any) {
     if (!configOptions) {
       throw new Error('You must set config, when calling init.');
     }
@@ -84,10 +84,10 @@ export class Adal6Service {
    *
    *
    * @readonly
-   * @type {adal.Config}
+   * @type {any}
    * @memberOf Adal6Service
    */
-  public get config(): adal.Config {
+  public get config(): any {
     return this.adalContext.config;
   }
 

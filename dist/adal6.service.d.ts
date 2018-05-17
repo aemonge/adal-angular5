@@ -32,19 +32,19 @@ export declare class Adal6Service {
     /**
      *
      *
-     * @param {adal.Config} configOptions
+     * @param {any} configOptions
      *
      * @memberOf Adal6Service
      */
-    init(configOptions: adal.Config): void;
+    init(configOptions: any): void;
     /**
      *
      *
      * @readonly
-     * @type {adal.Config}
+     * @type {any}
      * @memberOf Adal6Service
      */
-    readonly config: adal.Config;
+    readonly config: any;
     /**
      *
      *
