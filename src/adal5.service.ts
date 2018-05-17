@@ -3,7 +3,10 @@ import * as adalLib from 'adal-angular';
 import { Adal5User } from './adal5-user';
 import { Injectable } from '@angular/core';
 
-import User = adal.User;
+// import User = adal.User;
+
+// adal = new AdalModule(conf);
+// var AdalModule = require('../../../lib/adal.js');
 
 /**
  *
@@ -221,17 +224,20 @@ export class Adal5Service {
   /**
    *
    *
-   * @returns {Observable<adal.User>}
+   * @returns {Observable<Adal5User>}
    *
    * @memberOf Adal5Service
    */
   public getUser(): Observable<any> {
-    return bindCallback((cb: (u: adal.User) => User) => {
-      this.adalContext.getUser(function (error: string, user: adal.User) {
+    return bindCallback((cb: (u: Adal5User) => Adal5User) => {
+      this.adalContext.getUser((error: string, user: any) => {
+      // this.adalContext.getUser((error: string, user: Adal5User): Adal5User => {
         if (error) {
           this.adalContext.error('Error when getting user', error);
+          // return cb(null);
           cb(null);
         } else {
+          // return cb(user);
           cb(user);
         }
       });
