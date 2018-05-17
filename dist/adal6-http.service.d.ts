@@ -1,15 +1,15 @@
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/catch';
-import { Adal5Service } from './adal5.service';
+import { Adal6Service } from './adal6.service';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 /**
  *
  *
  * @export
- * @class Adal5HTTPService
+ * @class Adal6HTTPService
  */
-export declare class Adal5HTTPService {
+export declare class Adal6HTTPService {
     private http;
     private service;
     /**
@@ -17,19 +17,19 @@ export declare class Adal5HTTPService {
      *
      * @static
      * @param {HttpClient} http
-     * @param {Adal5Service} service
+     * @param {Adal6Service} service
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    static factory(http: HttpClient, service: Adal5Service): Adal5HTTPService;
+    static factory(http: HttpClient, service: Adal6Service): Adal6HTTPService;
     /**
-     * Creates an instance of Adal5HTTPService.
+     * Creates an instance of Adal6HTTPService.
      * @param {HttpClient} http
-     * @param {Adal5Service} service
+     * @param {Adal6Service} service
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    constructor(http: HttpClient, service: Adal5Service);
+    constructor(http: HttpClient, service: Adal6Service);
     /**
      *
      *
@@ -37,7 +37,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     get(url: string, options: {
         body?: any;
@@ -58,7 +58,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     post(url: string, body: any, options: {
         body?: any;
@@ -78,7 +78,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     delete(url: string, options: {
         body?: any;
@@ -99,7 +99,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     patch(url: string, body: any, options: {
         body?: any;
@@ -120,7 +120,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     put(url: string, body: any, options: {
         body?: any;
@@ -140,7 +140,7 @@ export declare class Adal5HTTPService {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     head(url: string, options: {
         body?: any;
@@ -162,7 +162,7 @@ export declare class Adal5HTTPService {
      * @param {RequestOptionsArgs} options
      * @returns {Observable<string>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     private sendRequest(method, url, options);
     /**
@@ -172,7 +172,7 @@ export declare class Adal5HTTPService {
      * @param {*} error
      * @returns
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
     private handleError(error);
 }

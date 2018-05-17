@@ -6,30 +6,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var adal5_interceptor_1 = require("./adal5-interceptor");
-var adal5_user_1 = require("./adal5-user");
-var adal5_service_1 = require("./adal5.service");
-var adal5_http_service_1 = require("./adal5-http.service");
+var adal6_interceptor_1 = require("./adal6-interceptor");
+var adal6_user_1 = require("./adal6-user");
+var adal6_service_1 = require("./adal6.service");
+var adal6_http_service_1 = require("./adal6-http.service");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
-var Adal5AgnularModule = /** @class */ (function () {
-    function Adal5AgnularModule() {
+var Adal6AgnularModule = /** @class */ (function () {
+    function Adal6AgnularModule() {
     }
-    Adal5AgnularModule = __decorate([
+    Adal6AgnularModule = __decorate([
         core_1.NgModule({
             imports: [],
             exports: [
-                adal5_user_1.Adal5User, adal5_service_1.Adal5Service, adal5_http_service_1.Adal5HTTPService, adal5_interceptor_1.Adal5Interceptor
+                adal6_user_1.Adal6User, adal6_service_1.Adal6Service, adal6_http_service_1.Adal6HTTPService, adal6_interceptor_1.Adal6Interceptor
             ],
             providers: [,
                 {
                     provide: http_1.HTTP_INTERCEPTORS,
-                    useClass: adal5_interceptor_1.Adal5Interceptor,
+                    useClass: adal6_interceptor_1.Adal6Interceptor,
                     multi: true
                 },
             ],
         })
-    ], Adal5AgnularModule);
-    return Adal5AgnularModule;
+    ], Adal6AgnularModule);
+    return Adal6AgnularModule;
 }());
-exports.Adal5AgnularModule = Adal5AgnularModule;
+exports.Adal6AgnularModule = Adal6AgnularModule;

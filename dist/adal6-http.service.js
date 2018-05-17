@@ -15,32 +15,32 @@ var http_1 = require("@angular/common/http");
  *
  *
  * @export
- * @class Adal5HTTPService
+ * @class Adal6HTTPService
  */
-var Adal5HTTPService = /** @class */ (function () {
+var Adal6HTTPService = /** @class */ (function () {
     /**
-     * Creates an instance of Adal5HTTPService.
+     * Creates an instance of Adal6HTTPService.
      * @param {HttpClient} http
-     * @param {Adal5Service} service
+     * @param {Adal6Service} service
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    function Adal5HTTPService(http, service) {
+    function Adal6HTTPService(http, service) {
         this.http = http;
         this.service = service;
     }
-    Adal5HTTPService_1 = Adal5HTTPService;
+    Adal6HTTPService_1 = Adal6HTTPService;
     /**
      *
      *
      * @static
      * @param {HttpClient} http
-     * @param {Adal5Service} service
+     * @param {Adal6Service} service
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.factory = function (http, service) {
-        return new Adal5HTTPService_1(http, service);
+    Adal6HTTPService.factory = function (http, service) {
+        return new Adal6HTTPService_1(http, service);
     };
     /**
      *
@@ -49,9 +49,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.get = function (url, options) {
+    Adal6HTTPService.prototype.get = function (url, options) {
         return this.sendRequest('get', url, options);
     };
     /**
@@ -62,9 +62,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.post = function (url, body, options) {
+    Adal6HTTPService.prototype.post = function (url, body, options) {
         options.body = body;
         return this.sendRequest('post', url, options);
     };
@@ -75,9 +75,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.delete = function (url, options) {
+    Adal6HTTPService.prototype.delete = function (url, options) {
         return this.sendRequest('delete', url, options);
     };
     /**
@@ -88,9 +88,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.patch = function (url, body, options) {
+    Adal6HTTPService.prototype.patch = function (url, body, options) {
         options.body = body;
         return this.sendRequest('patch', url, options);
     };
@@ -102,9 +102,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.put = function (url, body, options) {
+    Adal6HTTPService.prototype.put = function (url, body, options) {
         options.body = body;
         return this.sendRequest('put', url, options);
     };
@@ -115,9 +115,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} [options]
      * @returns {Observable<any>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.head = function (url, options) {
+    Adal6HTTPService.prototype.head = function (url, options) {
         return this.sendRequest('head', url, options);
     };
     /**
@@ -129,9 +129,9 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {RequestOptionsArgs} options
      * @returns {Observable<string>}
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.sendRequest = function (method, url, options) {
+    Adal6HTTPService.prototype.sendRequest = function (method, url, options) {
         var _this = this;
         var resource = this.service.GetResourceForEndpoint(url);
         var authenticatedCall;
@@ -163,18 +163,18 @@ var Adal5HTTPService = /** @class */ (function () {
      * @param {*} error
      * @returns
      *
-     * @memberOf Adal5HTTPService
+     * @memberOf Adal6HTTPService
      */
-    Adal5HTTPService.prototype.handleError = function (error) {
+    Adal6HTTPService.prototype.handleError = function (error) {
         // In a real world app, we might send the error to remote logging infrastructure
         var errMsg = error.message || 'Server error';
         console.error(JSON.stringify(error)); // log to console instead
         return rxjs_1.Observable.throw(error);
     };
-    Adal5HTTPService = Adal5HTTPService_1 = __decorate([
+    Adal6HTTPService = Adal6HTTPService_1 = __decorate([
         core_1.Injectable()
-    ], Adal5HTTPService);
-    return Adal5HTTPService;
-    var Adal5HTTPService_1;
+    ], Adal6HTTPService);
+    return Adal6HTTPService;
+    var Adal6HTTPService_1;
 }());
-exports.Adal5HTTPService = Adal5HTTPService;
+exports.Adal6HTTPService = Adal6HTTPService;

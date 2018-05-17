@@ -1,4 +1,4 @@
-export { Adal5User } from './adal5-user';
-export { Adal5Service } from './adal5.service';
-export { Adal5HTTPService } from './adal5-http.service';
-export { Adal5Interceptor } from './adal5-interceptor';
+export { Adal6User } from './adal6-user';
+export { Adal6Service } from './adal6.service';
+export { Adal6HTTPService } from './adal6-http.service';
+export { Adal6Interceptor } from './adal6-interceptor';
