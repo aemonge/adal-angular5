@@ -103,7 +103,7 @@ export declare class Adal5Service {
     /**
      *
      *
-     * @returns {Observable<adal.User>}
+     * @returns {Observable<Adal5User>}
      *
      * @memberOf Adal5Service
      */

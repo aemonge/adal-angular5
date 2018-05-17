@@ -9,6 +9,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var rxjs_1 = require("rxjs");
 var adalLib = require("adal-angular");
 var core_1 = require("@angular/core");
+// import User = adal.User;
+// adal = new AdalModule(conf);
+// var AdalModule = require('../../../lib/adal.js');
 /**
  *
  *
@@ -202,7 +205,7 @@ var Adal5Service = /** @class */ (function () {
     /**
      *
      *
-     * @returns {Observable<adal.User>}
+     * @returns {Observable<Adal5User>}
      *
      * @memberOf Adal5Service
      */
@@ -210,11 +213,14 @@ var Adal5Service = /** @class */ (function () {
         var _this = this;
         return rxjs_1.bindCallback(function (cb) {
             _this.adalContext.getUser(function (error, user) {
+                // this.adalContext.getUser((error: string, user: Adal5User): Adal5User => {
                 if (error) {
-                    this.adalContext.error('Error when getting user', error);
+                    _this.adalContext.error('Error when getting user', error);
+                    // return cb(null);
                     cb(null);
                 }
                 else {
+                    // return cb(user);
                     cb(user);
                 }
             });
