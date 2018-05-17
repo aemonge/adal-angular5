@@ -1,4 +1,4 @@
-# adal-angular5
+# adal-angular6
 ![build status](https://travis-ci.org/grumar/adal-angular5.svg?branch=master)
 
 
@@ -42,7 +42,7 @@ public get(url: string): Observable<any> {
         const options = this.prepareOptions();
         return this.adal5HttpService.get(url, options)
     }
-    
+
 private prepareOptions():any{
  let headers = new HttpHeaders();
         headers = headers
@@ -50,4 +50,4 @@ private prepareOptions():any{
             .set('Authorization', `Bearer ${this.adal5Service.userInfo.token}`);
         return { headers };
 }
-```        
+```
