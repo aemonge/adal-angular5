@@ -1,7 +1,7 @@
 {
   "name": "adal-angular6",
-  "version": "1.0.64",
-  "description": "ADAL wrapper for Angular5.",
+  "version": "1.0.65",
+  "description": "ADAL wrapper for Angular6.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:aemonge/adal-angular5.git"
+    "url": "git+git@github.com:aemonge/adal-angular6.git"
   },
   "keywords": [
     "adal",
@@ -18,9 +18,9 @@
   "author": "Ben Baran",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aemonge/adal-angular5/issues"
+    "url": "https://github.com/aemonge/adal-angular6/issues"
   },
-  "homepage": "https://github.com/aemonge/adal-angular5#readme",
+  "homepage": "https://github.com/aemonge/adal-angular6#readme",
   "dependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0",
