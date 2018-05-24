@@ -1,7 +1,7 @@
 {
   "name": "adal-angular6",
-  "version": "1.0.66",
-  "description": "ADAL wrapper for Angular6.",
+  "version": "1.0.67",
+  "description": "Warning: Deprecated, Please use https://github.com/benbaran/adal-angular4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

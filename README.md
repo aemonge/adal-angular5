@@ -1,4 +1,11 @@
+# Warning: Deprecated!!!
+
+Please use https://github.com/benbaran/adal-angular4 which has already been merged into angular 6.
+
+This repository lives only as my personal documentation on how to do a naive migration.
+
 # adal-angular6
+
 ![build status](https://travis-ci.org/grumar/adal-angular6.svg?branch=master)
 
 
