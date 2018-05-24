@@ -1,6 +1,6 @@
 {
   "name": "adal-angular6",
-  "version": "1.0.67",
+  "version": "1.0.68",
   "description": "Warning: Deprecated, Please use https://github.com/benbaran/adal-angular4",
   "main": "index.js",
   "scripts": {
